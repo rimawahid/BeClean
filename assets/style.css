@@ -3,6 +3,11 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .primaryColor{
     color: #323232;
     font-size: 36px;
@@ -31,7 +36,13 @@ body{
     background: transparent;
     color: #46B06D;
 }
-
+.page-name {
+    color: #fff;
+    font-size: 40px;
+    padding-top: 100px;
+    padding-left: 175px;
+    font-weight: 600;
+}
 .icon{
     color: #fff;
 }
@@ -88,6 +99,7 @@ body{
     color: #46B06D;
 }
 /* start about laundry */
+
 .about-laundry-img{
     width: 100%;
 }
@@ -113,12 +125,13 @@ body{
 }
 .about-phn{
 color: #323232;
-text-decoration: none;
+text-decoration: none!important;
 font-size: 25px;
 }
-.about-phn:hover{
-color: #46B06D;
-text-decoration: none;
+
+.contact-icon:hover .about-phn{
+    color: #46B06D;
+    text-decoration: none;
 }
 .about-text{
     color: #323232;
@@ -128,10 +141,7 @@ text-decoration: none;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
 }
-.about-text:hover{
-    color: #46B06D;
-    text-decoration: underline;
-}
+
 .about-icon {
     font-size: 50px;
     color: #46B06D;
@@ -140,6 +150,18 @@ text-decoration: none;
 .about-box {
     box-shadow: 2px 2px 4px 1px #8080801c;
     border-radius: 5px;
+}
+.about-box:hover .about-text{
+    color: #46B06D;
+    text-decoration: underline;
+}
+/* modal start here  */
+
+.modal-service{
+    height: 32px;
+    width: 402px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
 }
 /* start  our work */
 .work-bg{
@@ -170,6 +192,45 @@ padding-left: 70px;
     left: -50px;
 }
 /* start services */
+.service-heading{
+    color: #fff;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.service-text{
+    color: #fff;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+.service-img {
+    margin-top: 22px;
+    height: 110px;
+    background: rgb(77, 180, 105);
+    padding: 22px;
+    margin-left: 12px;
+    border-radius: 50%;
+}
+.card-img-overlay{
+    top: 45%;
+}
+.card-img{
+    opacity: .6;
+    
+}
+.service-card{
+    border: none;
+}
+.service-card:hover h5{
+text-decoration: underline;
+}
+#services{
+overflow-x: hidden;
+}
+
 .commercial-img{
     width: 100%;
     margin-left: -12px ;
@@ -253,10 +314,87 @@ color: #fff;
     color: #46B06D;
 }
 
+/* about page start here */
+.main-img{
+    position: relative;
+}
+.overlayImg {
+    width: 380px;
+}
+.overlay-img {
+    position: absolute;
+    top: 50%;
+    left: -7%;
+}
+.overlay-img .img{
+height: 300px;
+}
 
 
+#aboutpage-laundry{
+    background-image: url(../images/about/asset\ 2.png);
+    background-repeat: no-repeat;
+}
+.guarantee-bg {
+    background: #fff;
+    padding: 60px;
+    margin-left: -19px;
+    margin-right: 20px;
+}
+.guarantee-img{
+    width: 689px;
+}
+.guaranteeImg{
+    width: 100%;
+}
+
+.advantages-icon {
+    color: #46B06D;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 3px 0px 20px 5px #8080800f;
+    font-size: 25px;
+    margin-top: 20px;
+}
+.history-img{
+    width: 675px;
+    height: 490px;
+    margin-left: -12px;
+}
+.historyImg{
+    width: 100%;
+    height: 100%;
+}
+
+.team-img{
+    border-radius: 50%;
+}
+.team-member:hover h3{
+text-decoration: underline;
+color: #46B06D;
+}
 
 
+/* page service start here */
+
+.service1-card{
+    border: none;
+}
+.service1-heading{
+    color: #323232;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.service1-text{
+    color: #727272;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
 
 /* page faq start here */
 .faq-bg{
