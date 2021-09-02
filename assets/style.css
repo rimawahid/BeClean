@@ -274,6 +274,9 @@ color: #fff;
     
     box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
 }
+.trusted-laundry{
+    margin-left: 95px;
+}
 /* footer start here */
 .footer-bg{
     background: #323232;
@@ -425,11 +428,18 @@ color: #46B06D;
     font-size: 20px;
     font-weight: 600;
 }
+
 .price-img {
     height: 100px;
     width: 100px;
-    /* text-align: center; */
-    margin-left: 70px;
+    margin-top: 8px;
+}
+
+.price-ima {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
     margin-top: 20px;
 }
 .card-border{
@@ -454,6 +464,7 @@ color: #46B06D;
     width: 100%;
     height: 0;
     transition: .3s ease;
+    text-align: center;
   } 
   
    .card1:hover .overlay {
@@ -463,7 +474,7 @@ color: #46B06D;
    .text {
     position: absolute;
     top: 50%;
-    left: 22%;
+    left: 25%;
     transform: translate(-15%, -50%);
     text-align: center;
   }  

@@ -92,7 +92,7 @@
         <div class="carousel-caption d-none d-md-block hero-text">
           <h1 class="primaryColor">Laundry Service</h1>
           <p class="secondaryColor">We Care for the Clothes Your Wear</p>
-          <button class="hero-btn-custom">Order Now</button>
+          <button class="hero-btn-custom" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Order Now</button>
         </div>
       </div>
       <!-- <div class="carousel-item">
@@ -107,7 +107,7 @@
         <div class="carousel-caption d-none d-md-block hero-text">
           <h1 class="hero-heading">Laundry Service</h1>
           <p class="secondaryColor">We Care for the Clothes Your Wear</p>
-          <button class="hero-btn-custom">Order Now</button>
+          <button class="hero-btn-custom" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Order Now</button>
         </div>
       </div>
     </div>
@@ -176,7 +176,7 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="row about-box">
+          <div class="row about-box" style="height: 146px;">
             <div class="col-md-3">
               <i class="fas fa-money-bill about-icon"></i>
             </div>
@@ -409,43 +409,43 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-5">
-          <form action="#">
+          <form name="scheduleForm" action="#" method="POST" onsubmit="getSchedule(); return false">
             <div class="mb-3">
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Name*" required>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Name*" name="userName" id="userName">
             </div>
             <div class="row mb-3">
               <div class="col">
-                <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email Address*"
-                  required>
+                <input type="email" class="form-control" placeholder="Your Email" name="userEmail" id="userEmail"
+                  >
               </div>
               <div class="col">
-                <input type="number" class="form-control" placeholder="Your Number" aria-label="Your Phone NUmber*"
-                  required>
+                <input type="number" class="form-control" placeholder="Your Number" name="userPhone" id="userPhone"
+                  >
               </div>
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Address*"
-                required>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Address*" name="userAddress" id="userAddress"
+               >
             </div>
             <div class="mb-3">
-              <select name="" id="" class="modal-service">
-                <option value="">Service</option>
-                <option value="">Service 1</option>
-                <option value="">Service 2</option>
-                <option value="">Service 3</option>
+              <select name="service" id="service" class="modal-service">
+                <option value="Service">Service</option>
+                <option value="Service 1">Service 1</option>
+                <option value="Service 2">Service 2</option>
+                <option value="Service 3">Service 3</option>
               </select>
             </div>
             <div class="row mb-3">
               <div class="col">
-                <input type="date" class="form-control" placeholder="Pick-Up Date" aria-label="Your Email" required>
+                <input type="date" class="form-control" id="currentDate" name="currentDate">
               </div>
               <div class="col">
-                <input type="date" class="form-control" placeholder="Delivery Date" aria-label="Last name" required>
+                <input type="date" class="form-control" name="deliveryDate" id="deliveryDate" >
               </div>
             </div>
             <div class="mb-3">
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
-                placeholder="Your Question"></textarea>
+                placeholder="Your Question" name="userQus"></textarea>
             </div>
             <input type="submit" class="btn-custom" data-bs-dismiss="modal" value="Order Now">
           </form>
@@ -499,7 +499,7 @@
   <section id="Trusted Laundry Service" class="mt-5 mb-5">
     <h2 class="primaryColor text-center mt-5 mb-5">Trusted Laundry Service</h2>
     <div class="container">
-      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <ul class="nav nav-pills trusted-laundry" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
             type="button" role="tab" aria-controls="pills-home" aria-selected="true">Our Approach</button>
@@ -527,7 +527,7 @@
                 efficient use of their operational and financial resources.</p>
             </div>
             <div class="col-lg-5 col-md-5 col-sm-12 pt-5 ">
-              <img src="images/img-06.jpeg" alt="" class="about-laundry-img" style="height: 280px;">
+              <img src="images/img-06.jpeg" alt="" class="about-laundry-img" style="height: 350px;">
             </div>
             <div class="col-lg-1 col-md-1 col-sm-12 pt-5 "></div>
           </div>
@@ -744,7 +744,10 @@
       <div class="card-group responsive">
         <div class="card1 m-3">
           <div class="card  card-border ">
-            <img src="../images/price/shirt.png" class="card-img-top price-img" alt="...">
+            <div class="price-ima">
+              <img src="images/price/shirt.png" class="card-img-top price-img" alt="...">
+            </div>
+            
             <div class="card-body">
               <h5 class="card-title price-heading">Shirts Services</h5>
               <p class="card-text secondaryColor">Washed and Pressed</p>
@@ -764,7 +767,10 @@
         </div>
         <div class="card1 m-3">
           <div class="card  card-border ">
-            <img src="../images/price/iron.png" class="card-img-top price-img" alt="...">
+            <div class="price-ima">
+              <img src="images/price/iron.png" class="card-img-top price-img" alt="...">
+            </div>
+            
             <div class="card-body">
               <h5 class="card-title price-heading">Ironing Services</h5>
               <p class="card-text secondaryColor">Iron and Fold</p>
@@ -784,7 +790,10 @@
         </div>
         <div class="card1 m-3">
           <div class="card  card-border ">
-            <img src="../images/price/dress.png" class="card-img-top price-img" alt="...">
+            <div class="price-ima">
+              <img src="images/price/dress.png" class="card-img-top price-img" alt="...">
+            </div>
+
             <div class="card-body">
               <h5 class="card-title price-heading">Day Dress Services</h5>
               <p class="card-text secondaryColor">Washed and Pressed</p>
@@ -804,7 +813,9 @@
         </div>
         <div class="card1 m-3">
           <div class="card  card-border ">
-            <img src="../images/price/dress-drying.png" class="card-img-top price-img" alt="...">
+            <div class="price-ima">
+              <img src="images/price/dress-drying.png" class="card-img-top price-img" alt="...">
+            </div>
             <div class="card-body">
               <h5 class="card-title price-heading">Curtains Services</h5>
               <p class="card-text secondaryColor">Washed and Pressed</p>
@@ -822,9 +833,12 @@
             </div>
           </div>
         </div>
-        <div class="card1 m-3">
+         <div class="card1 m-3">
           <div class="card  card-border ">
-            <img src="../images/price/blanket.png" class="card-img-top price-img" alt="...">
+            <div class="price-ima">
+              <img src="images/price/blanket.png" class="card-img-top price-img" alt="...">
+            </div>
+            
             <div class="card-body">
               <h5 class="card-title price-heading">Blanket Services</h5>
               <p class="card-text secondaryColor">Washed and Pressed</p>
@@ -844,7 +858,10 @@
         </div>
         <div class="card1 m-3">
           <div class="card  card-border ">
-            <img src="../images/price/hanging-towel.png" class="card-img-top price-img" alt="...">
+            <div class="price-ima">
+              <img src="images/price/hanging-towel.png" class="card-img-top price-img" alt="...">
+            </div>
+            
             <div class="card-body">
               <h5 class="card-title price-heading">Dry Cleaning</h5>
               <p class="card-text secondaryColor">Wash, Dry and Fold</p>
@@ -864,7 +881,10 @@
         </div>
         <div class="card1 m-3">
           <div class="card  card-border ">
-            <img src="../images/price/needle.png" class="card-img-top price-img " alt="...">
+            <div class="price-ima">
+              <img src="images/price/needle.png" class="card-img-top price-img " alt="...">
+            </div>
+           
             <div class="card-body">
               <h5 class="card-title price-heading">Repairs & Alterations</h5>
               <p class="card-text secondaryColor">Simple Sewing</p>
@@ -881,10 +901,13 @@
               <button class="btn-custom">Order Now</button>
             </div>
           </div>
-        </div>
+        </div> 
         <div class="card1 m-3">
           <div class="card  card-border ">
-            <img src="../images/price/bedroom.png" class="card-img-top price-img" alt="...">
+            <div class="price-ima">
+              <img src="images/price/bedroom.png" class="card-img-top price-img" alt="...">
+            </div>
+            
             <div class="card-body">
               <h5 class="card-title price-heading">Bedding</h5>
               <p class="card-text secondaryColor">Bed set(Wash and Press)</p>
@@ -968,6 +991,7 @@
   <script src="vendors/js/jquery-3.6.0.min.js"></script>
   <script src="vendors/js/slick.min.js"></script>
   <script src="assets/js/my.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>

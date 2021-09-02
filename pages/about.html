@@ -317,6 +317,72 @@
     </nav>
   </section>
   <!-- end footer -->
+
+
+   <!-- start modal -->
+   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+   aria-labelledby="staticBackdropLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title primaryColor" id="staticBackdropLabel">Schedule a Pickup</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body p-5">
+         <form action="#">
+           <div class="mb-3">
+             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Name*" required>
+           </div>
+           <div class="row mb-3">
+             <div class="col">
+               <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email Address*"
+                 required>
+             </div>
+             <div class="col">
+               <input type="number" class="form-control" placeholder="Your Number" aria-label="Your Phone NUmber*"
+                 required>
+             </div>
+           </div>
+           <div class="mb-3">
+             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Address*"
+               required>
+           </div>
+           <div class="mb-3">
+             <select name="" id="" class="modal-service">
+               <option value="">Service</option>
+               <option value="">Service 1</option>
+               <option value="">Service 2</option>
+               <option value="">Service 3</option>
+             </select>
+           </div>
+           <div class="row mb-3">
+             <div class="col">
+               <input type="date" class="form-control" placeholder="Pick-Up Date" aria-label="Your Email" required>
+             </div>
+             <div class="col">
+               <input type="date" class="form-control" placeholder="Delivery Date" aria-label="Last name" required>
+             </div>
+           </div>
+           <div class="mb-3">
+             <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+               placeholder="Your Question"></textarea>
+           </div>
+           <input type="submit" class="btn-custom" data-bs-dismiss="modal" value="Order Now">
+         </form>
+       </div>
+       <!-- <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary">Understood</button>
+       </div> -->
+     </div>
+   </div>
+ </div>
+ <!-- end modal -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
