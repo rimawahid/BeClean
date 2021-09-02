@@ -59,7 +59,7 @@ function getSchedule() {
 
 
     if (name == "" || email == "" || phone == "" || phone == "" || address == "" || service == "" || deliveryDate == "" || currentDate == "" ) {
-        //alert("Please must be filled all Field");
+        alert("Please must be filled all Field");
         // let ans = document.getElementById("demo");
         // ans.style.display = "block";
         // ans.innerHTML = "Please must be filled all Field"
@@ -82,9 +82,9 @@ function getSchedule() {
 
 //order Details  
 
-// function showOrderDetails(x){
-//     document.getElementById("demo").innerHTML = name;
-// }
+function showOrderDetails(){
+    document.getElementById("orderDetails").style.display = "block";
+}
 
 
 

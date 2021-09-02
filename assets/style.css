@@ -481,6 +481,15 @@ color: #46B06D;
 
 
 
+  /* Order details */
+             
+  .order-details{
+      display: none;
+      font-size: 18px;
+      color: #323232;
+  }
+
+
 
 
 
