@@ -487,7 +487,13 @@ color: #46B06D;
       display: none;
       font-size: 18px;
       color: #323232;
+      box-shadow: 2px 2px 4px 1px #8080801c;
+      width: 500px;
   }
+  td{
+      padding: 5px 20px;
+  }
+  
 
 
 

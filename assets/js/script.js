@@ -20,7 +20,7 @@ function getQus() {
         //alert("We get Your Question");
         let ans = document.getElementById("demo");
         ans.style.display = "block"
-        ans.innerHTML = "We get Your Question";
+        ans.innerHTML = "We have received your question and we will replay you as soon as possible";
         return false
 
     }
@@ -29,17 +29,11 @@ function getQus() {
 
 // current date
 
-let currentDate = document.getElementById('currentDate')
-.value = new Date().toISOString().substring(0, 10);
+document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);
 
 // Schedule a Pickup from
 
 function getSchedule() {
-//     let scheduleData =  "";
-    
-//    for(i=0; i<8; i++){
-//     scheduleData += document.forms['scheduleForm'].elements[i].name + " : " + document.forms['scheduleForm'].elements[i].value + "\n";
-// }
     let name = document.forms['scheduleForm'].elements[0].value;
     console.log(name)
     let email = document.forms['scheduleForm'].elements[1].value;
@@ -58,32 +52,30 @@ function getSchedule() {
     console.log(qus)
 
 
-    if (name == "" || email == "" || phone == "" || phone == "" || address == "" || service == "" || deliveryDate == "" || currentDate == "" ) {
+    if (name == "" || email == "" || phone == "" || phone == "" || address == "" || service == "" || deliveryDate == "" || currentDate == "") {
         alert("Please must be filled all Field");
-        // let ans = document.getElementById("demo");
-        // ans.style.display = "block";
-        // ans.innerHTML = "Please must be filled all Field"
-        console.log(" not ok")
-        return false
+        //console.log(" not ok")
+        //return false
     } else {
-        //alert("We get Your Question");
-        // let ans = document.getElementById("demo");
-        // ans.style.display = "block"
-        // ans.innerHTML = "We get Your Question";
         console.log("ok")
         window.location.href = "orderConfirm.html"
-        
+
         // return false
-
+        const order = {
+            name,
+            address,
+            service,
+            currentDate,
+            deliveryDate
+        }
+        localStorage.setItem("orderDetails", JSON.stringify(order))
     }
-
- 
 }
 
 //order Details  
 
-function showOrderDetails(){
-    document.getElementById("orderDetails").style.display = "block";
+function showOrderDetails() {
+    document.getElementById("orderDetailsBtn").style.display = "block";
 }
 
 

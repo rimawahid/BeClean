@@ -8,6 +8,8 @@
     <title>Order Confirm</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="assets/style.css">
 
 </head>
@@ -85,45 +87,40 @@
                 <h2 class="primaryColor">Thank you for your order</h2>
                 <button onclick="showOrderDetails()" class="btn-custom">Order Details</button>
             </div>
-            <div class="col-lg-6">
-                <div id="orderDetails" class="order-details">
-                    <table>
+            <div class="col-lg-6 col-md-6 col-sm-12 p-5">
+                <div id="orderDetailsBtn" class="order-details">
+                    <table >
                       <tr>
                         <td><label for="">Name </label></td>
                         <td> :</td>
-                        <td><input type="text" "></td>
+                        <td id="orderName"></td>
                       </tr>
                       <tr>
                         <td><label for="">Address </label></td>
                         <td> :</td>
-                        <td></td>
+                        <td id="orderAddress"></td>
                       </tr>
                       <tr>
                         <td><label for="">Service </label></td>
                         <td> :</td>
-                        <td></td>
+                        <td id="serviceOrder"></td>
                       </tr>
                       <tr>
                         <td><label for="">Pick-Up Date </label></td>
                         <td> :</td>
-                        <td></td>
+                        <td id="pickUpDate"></td>
                       </tr>
                       <tr>
                         <td><label for="">Delivery Date </label></td>
                         <td> :</td>
-                        <td></td>
+                        <td id="orderDeliveryDAte"></td>
                       </tr>
-
-
                     </table>
                 </div>
             </div>
         </div>
 
     </div>
-
-
-
       <!-- start footer -->
       <section class="footer-bg">
         <div class="container pt-5 pb-5">
@@ -179,6 +176,15 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+      const orderInfo = (JSON.parse(localStorage.getItem("orderDetails")));
+      document.getElementById("orderName").innerHTML = orderInfo.name;
+      document.getElementById("orderAddress").innerHTML = orderInfo.address;
+      document.getElementById("serviceOrder").innerHTML = orderInfo.service;
+      document.getElementById("pickUpDate").innerHTML = orderInfo.currentDate;
+      document.getElementById("orderDeliveryDAte").innerHTML = orderInfo.deliveryDate;
+
+    </script>
 </body>
 
 </html>
